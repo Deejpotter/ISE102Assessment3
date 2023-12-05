@@ -8,24 +8,26 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/home/runner/.nuget/packages/": {}
+    "C:\\Users\\Deej\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/runner/ISE102Assessment3-1/ISE102_Assessment3.csproj",
+      "projectUniqueName": "C:\\Users\\Deej\\OneDrive\\School Stuff\\DiplomaOfSoftwareEngineering\\Intro to Software Engineering\\Assessment 3\\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\\ISE102_Assessment3.csproj",
       "projectName": "ISE102_Assessment3",
-      "projectPath": "/home/runner/ISE102Assessment3-1/ISE102_Assessment3.csproj",
-      "packagesPath": "/home/runner/.nuget/packages/",
-      "outputPath": "/home/runner/ISE102Assessment3-1/obj/",
+      "projectPath": "C:\\Users\\Deej\\OneDrive\\School Stuff\\DiplomaOfSoftwareEngineering\\Intro to Software Engineering\\Assessment 3\\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\\ISE102_Assessment3.csproj",
+      "packagesPath": "C:\\Users\\Deej\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Deej\\OneDrive\\School Stuff\\DiplomaOfSoftwareEngineering\\Intro to Software Engineering\\Assessment 3\\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/runner/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Deej\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -59,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/nix/store/4axlc21msjr9g181l2y6hxsmm4jar8i7-dotnet-sdk-6.0.403/sdk/6.0.403/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

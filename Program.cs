@@ -69,9 +69,17 @@ class Program
                         // If the login method returns true, run the UserMenu method.
                         if (bank.Login(username, password))
                         {
-                            loggedIn = true;
-                            // Login successful, run the UserMenu method to start the user menu loop.
-                            UserMenu();
+                            // Get the user object from the bank's users list.
+                            User? currentUser = bank.users.Find(user => username == user.Username);
+                            // If the user is null, the username was not found in the list.
+                            if (currentUser == null)
+                            {
+                                Console.WriteLine("User not found.");
+                                continue;
+                            }  
+                            currentUser.LoggedIn = true;
+                            // Login successful, run the UserMenu method to start the user menu loop and pass in the user object.
+                            UserMenu(currentUser);
                         }
                         else
                         {
@@ -111,7 +119,7 @@ class Program
     /// Run the user menu which allows the user to view their balance, deposit, withdraw and transfer.
     /// Has placeholder functionality for now.
     /// </summary>
-    static void UserMenu()
+    static void UserMenu(User currentUser)
     {
         // Initialise a string to store the user's choice. 
         // We can use the same variable name as above because they are scoped to the methods.
@@ -126,8 +134,8 @@ class Program
             switch (choice)
             {
                 case "1":
-                    // TODO: Implement View Balance
-                    Console.WriteLine("View Balance functionality coming soon.");
+                    // Call the ViewBalance method on the bank object.
+                    bank.ViewBalance(currentUser);
                     break;
                 case "2":
                     // TODO: Implement Deposit

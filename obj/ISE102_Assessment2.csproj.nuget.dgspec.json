@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Deej\\OneDrive\\School Stuff\\DiplomaOfSoftwareEngineering\\Intro to Software Engineering\\Assessment 3\\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\\ISE102_Assessment3.csproj": {}
+    "C:\\Users\\Deej\\OneDrive\\School Stuff\\DiplomaOfSoftwareEngineering\\Intro to Software Engineering\\Assessment 3\\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\\ISE102_Assessment2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Deej\\OneDrive\\School Stuff\\DiplomaOfSoftwareEngineering\\Intro to Software Engineering\\Assessment 3\\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\\ISE102_Assessment3.csproj": {
+    "C:\\Users\\Deej\\OneDrive\\School Stuff\\DiplomaOfSoftwareEngineering\\Intro to Software Engineering\\Assessment 3\\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\\ISE102_Assessment2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Deej\\OneDrive\\School Stuff\\DiplomaOfSoftwareEngineering\\Intro to Software Engineering\\Assessment 3\\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\\ISE102_Assessment3.csproj",
-        "projectName": "ISE102_Assessment3",
-        "projectPath": "C:\\Users\\Deej\\OneDrive\\School Stuff\\DiplomaOfSoftwareEngineering\\Intro to Software Engineering\\Assessment 3\\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\\ISE102_Assessment3.csproj",
+        "projectUniqueName": "C:\\Users\\Deej\\OneDrive\\School Stuff\\DiplomaOfSoftwareEngineering\\Intro to Software Engineering\\Assessment 3\\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\\ISE102_Assessment2.csproj",
+        "projectName": "ISE102_Assessment2",
+        "projectPath": "C:\\Users\\Deej\\OneDrive\\School Stuff\\DiplomaOfSoftwareEngineering\\Intro to Software Engineering\\Assessment 3\\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\\ISE102_Assessment2.csproj",
         "packagesPath": "C:\\Users\\Deej\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Deej\\OneDrive\\School Stuff\\DiplomaOfSoftwareEngineering\\Intro to Software Engineering\\Assessment 3\\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\\obj\\",
         "projectStyle": "PackageReference",

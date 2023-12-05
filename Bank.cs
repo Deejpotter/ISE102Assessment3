@@ -215,27 +215,26 @@ class Bank
         } while (choice != "n");
     }
 
-
-    static void checkCredit()
+    static void checkCredit(User currentUser)
     {
-        Console.WriteLine($"Your current balance is ${accountBalance[loggedInUsers]}");
+        Console.WriteLine($"Your current balance is ${currentUser.Balance}");
     }
 
-    static void depositCredit()
+    static void depositCredit(User currentUser)
     {
         Console.WriteLine("How much would you like to deposit?: $");
         double amountDeposit = Convert.ToDouble(Console.ReadLine());
-        accountBalance[loggedInUsers] += amountDeposit;
+        currentUser.Balance += amountDeposit;
 
     }
-    static void withdrawCredit()
+    static void withdrawCredit(User currentUser)
     {
         Console.WriteLine("Enter the amount for withdrawal: $");
         double withdrawAmount = Convert.ToDouble(Console.ReadLine());
 
-        if (withdrawAmount <= accountBalance[loggedInUsers])
+        if (withdrawAmount <= currentUser.Balance)
         {
-            accountBalance[loggedInUsers] -= withdrawAmount;
+            currentUser.Balance -= withdrawAmount;
             Console.WriteLine("Credit withdrawal succesful!");
         }
         else
@@ -243,19 +242,19 @@ class Bank
             Console.WriteLine("Insufficient funds.");
         }
     }
-    static void transferCredit()
+    static void transferCredit(User currentUser)
     {
         Console.WriteLine("Enter the recepient's email: ");
-        string recepientEmail = Console.ReadLine();
+        string? recepientEmail = Console.ReadLine();
 
         if (emailsRegistered.Contains(recepientEmail))
         {
             Console.WriteLine("Enter the amount to transfer: $");
             double amountTransfer = Convert.ToDouble(Console.ReadLine());
 
-            if (amountTransfer <= accountBalance[loggedInUsers])
+            if (amountTransfer <= currentUser.Balance)
             {
-                accountBalance[loggedInUsers] -= amountTransfer;
+                currentUser.Balance -= amountTransfer;
                 accountBalance[recepientEmail] += amountTransfer;
                 Console.WriteLine("Transfer successful!");
             }
@@ -270,14 +269,5 @@ class Bank
         }
     }
 
-    static bool regexMatch(string pattern, string text)
-    {
-        Regex regex = new(pattern);
-        bool results = false;
-        Match match = regex.Match(text);
-        if (match.Success)
-            results = true;
-        return results;
-    }
 
 }
