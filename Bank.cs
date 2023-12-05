@@ -215,19 +215,19 @@ class Bank
         } while (choice != "n");
     }
 
-    static void checkCredit(User currentUser)
+    public void checkCredit(User currentUser)
     {
         Console.WriteLine($"Your current balance is ${currentUser.Balance}");
     }
 
-    static void depositCredit(User currentUser)
+    public void depositCredit(User currentUser)
     {
         Console.WriteLine("How much would you like to deposit?: $");
         double amountDeposit = Convert.ToDouble(Console.ReadLine());
         currentUser.Balance += amountDeposit;
 
     }
-    static void withdrawCredit(User currentUser)
+    public void withdrawCredit(User currentUser)
     {
         Console.WriteLine("Enter the amount for withdrawal: $");
         double withdrawAmount = Convert.ToDouble(Console.ReadLine());
@@ -242,12 +242,22 @@ class Bank
             Console.WriteLine("Insufficient funds.");
         }
     }
-    static void transferCredit(User currentUser)
+    public void transferCredit(User currentUser)
     {
         Console.WriteLine("Enter the recepient's email: ");
         string? recepientEmail = Console.ReadLine();
 
-        if (emailsRegistered.Contains(recepientEmail))
+        // Check if the email is null or whitespace.
+        if (String.IsNullOrWhiteSpace(recepientEmail))
+        {
+            Console.WriteLine("Email cannot be empty.");
+            return;
+        }
+
+        // Check if the recepient email exists in the list of users.
+        User? recepient = users.Find(user => recepientEmail == user.Email);
+
+        if (recepient != null)
         {
             Console.WriteLine("Enter the amount to transfer: $");
             double amountTransfer = Convert.ToDouble(Console.ReadLine());
@@ -255,7 +265,7 @@ class Bank
             if (amountTransfer <= currentUser.Balance)
             {
                 currentUser.Balance -= amountTransfer;
-                accountBalance[recepientEmail] += amountTransfer;
+                recepient.Balance += amountTransfer;
                 Console.WriteLine("Transfer successful!");
             }
             else
