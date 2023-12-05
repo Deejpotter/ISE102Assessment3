@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ISE102_Assessment3/1.0.0": {
+        "runtime": {
+          "ISE102_Assessment3.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ISE102_Assessment3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

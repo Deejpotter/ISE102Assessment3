@@ -214,4 +214,70 @@ class Bank
 
         } while (choice != "n");
     }
+
+
+    static void checkCredit()
+    {
+        Console.WriteLine($"Your current balance is ${accountBalance[loggedInUsers]}");
+    }
+
+    static void depositCredit()
+    {
+        Console.WriteLine("How much would you like to deposit?: $");
+        double amountDeposit = Convert.ToDouble(Console.ReadLine());
+        accountBalance[loggedInUsers] += amountDeposit;
+
+    }
+    static void withdrawCredit()
+    {
+        Console.WriteLine("Enter the amount for withdrawal: $");
+        double withdrawAmount = Convert.ToDouble(Console.ReadLine());
+
+        if (withdrawAmount <= accountBalance[loggedInUsers])
+        {
+            accountBalance[loggedInUsers] -= withdrawAmount;
+            Console.WriteLine("Credit withdrawal succesful!");
+        }
+        else
+        {
+            Console.WriteLine("Insufficient funds.");
+        }
+    }
+    static void transferCredit()
+    {
+        Console.WriteLine("Enter the recepient's email: ");
+        string recepientEmail = Console.ReadLine();
+
+        if (emailsRegistered.Contains(recepientEmail))
+        {
+            Console.WriteLine("Enter the amount to transfer: $");
+            double amountTransfer = Convert.ToDouble(Console.ReadLine());
+
+            if (amountTransfer <= accountBalance[loggedInUsers])
+            {
+                accountBalance[loggedInUsers] -= amountTransfer;
+                accountBalance[recepientEmail] += amountTransfer;
+                Console.WriteLine("Transfer successful!");
+            }
+            else
+            {
+                Console.WriteLine("Insufficient funds.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Recepient not found.");
+        }
+    }
+
+    static bool regexMatch(string pattern, string text)
+    {
+        Regex regex = new(pattern);
+        bool results = false;
+        Match match = regex.Match(text);
+        if (match.Success)
+            results = true;
+        return results;
+    }
+
 }
