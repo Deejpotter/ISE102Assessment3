@@ -117,8 +117,8 @@ class Program
 
     /// <summary>
     /// Run the user menu which allows the user to view their balance, deposit, withdraw and transfer.
-    /// Has placeholder functionality for now.
     /// </summary>
+    /// <param name="currentUser">This is the user object that is passed in from a successful login.</param>
     static void UserMenu(User currentUser)
     {
         // Initialise a string to store the user's choice. 
@@ -134,20 +134,20 @@ class Program
             switch (choice)
             {
                 case "1":
-                    // Call the ViewBalance method on the bank object.
-                    bank.ViewBalance(currentUser);
+                    // Call the ViewBalance method with the current user object.
+                    bank.CheckCredit(currentUser);
                     break;
                 case "2":
-                    // TODO: Implement Deposit
-                    Console.WriteLine("Deposit functionality coming soon.");
+                    // Call the Deposit method with the current user object.
+                    bank.DepositCredit(currentUser);
                     break;
                 case "3":
-                    // TODO: Implement Withdraw
-                    Console.WriteLine("Withdraw functionality coming soon.");
+                    // Call the Withdraw method with the current user object.
+                    bank.WithdrawCredit(currentUser);
                     break;
                 case "4":
-                    // TODO: Implement Transfer
-                    Console.WriteLine("Transfer functionality coming soon.");
+                    // Call the Transfer method with the current user object.
+                    bank.TransferCredit(currentUser);
                     break;
                 case "5":
                     // Return instead of break so we go back to the start menu where this method was called.

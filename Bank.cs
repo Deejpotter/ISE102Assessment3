@@ -215,25 +215,26 @@ class Bank
         } while (choice != "n");
     }
 
-    public void checkCredit(User currentUser)
+    public void CheckCredit(User currentUser)
     {
         Console.WriteLine($"Your current balance is ${currentUser.Balance}");
     }
 
-    public void depositCredit(User currentUser)
+    public void DepositCredit(User currentUser)
     {
         Console.WriteLine("How much would you like to deposit?: $");
         double amountDeposit = Convert.ToDouble(Console.ReadLine());
         currentUser.Balance += amountDeposit;
-
     }
-    public void withdrawCredit(User currentUser)
+
+    public void WithdrawCredit(User currentUser)
     {
         Console.WriteLine("Enter the amount for withdrawal: $");
         double withdrawAmount = Convert.ToDouble(Console.ReadLine());
 
         if (withdrawAmount <= currentUser.Balance)
         {
+            // If the amount is correct, reduce the current user's balance.
             currentUser.Balance -= withdrawAmount;
             Console.WriteLine("Credit withdrawal succesful!");
         }
@@ -242,7 +243,8 @@ class Bank
             Console.WriteLine("Insufficient funds.");
         }
     }
-    public void transferCredit(User currentUser)
+
+    public void TransferCredit(User currentUser)
     {
         Console.WriteLine("Enter the recepient's email: ");
         string? recepientEmail = Console.ReadLine();
@@ -259,11 +261,13 @@ class Bank
 
         if (recepient != null)
         {
+            // If the user is found, ask for the amount to transfer.
             Console.WriteLine("Enter the amount to transfer: $");
             double amountTransfer = Convert.ToDouble(Console.ReadLine());
 
             if (amountTransfer <= currentUser.Balance)
             {
+                // If the amount is correct, reduce the current user's balance and increase the recepient's balance.
                 currentUser.Balance -= amountTransfer;
                 recepient.Balance += amountTransfer;
                 Console.WriteLine("Transfer successful!");
