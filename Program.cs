@@ -66,6 +66,7 @@ class Program
                             Console.WriteLine("Password cannot be null.");
                             continue;
                         }
+
                         // If the login method returns true, run the UserMenu method.
                         if (bank.Login(username, password))
                         {
@@ -78,6 +79,7 @@ class Program
                                 continue;
                             }  
                             currentUser.LoggedIn = true;
+                            loggedIn = true;
                             // Login successful, run the UserMenu method to start the user menu loop and pass in the user object.
                             UserMenu(currentUser);
                         }

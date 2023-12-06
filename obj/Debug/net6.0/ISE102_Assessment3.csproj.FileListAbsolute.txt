@@ -13,3 +13,17 @@
 /home/runner/ISE102Assessment3-1/obj/Debug/net6.0/ISE102_Assessment3.pdb
 /home/runner/ISE102Assessment3-1/obj/Debug/net6.0/ISE102_Assessment3.genruntimeconfig.cache
 /home/runner/ISE102Assessment3-1/obj/Debug/net6.0/ref/ISE102_Assessment3.dll
+C:\Users\Deej\OneDrive\School Stuff\DiplomaOfSoftwareEngineering\Intro to Software Engineering\Assessment 3\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\bin\Debug\net6.0\ISE102_Assessment3.exe
+C:\Users\Deej\OneDrive\School Stuff\DiplomaOfSoftwareEngineering\Intro to Software Engineering\Assessment 3\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\bin\Debug\net6.0\ISE102_Assessment3.deps.json
+C:\Users\Deej\OneDrive\School Stuff\DiplomaOfSoftwareEngineering\Intro to Software Engineering\Assessment 3\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\bin\Debug\net6.0\ISE102_Assessment3.runtimeconfig.json
+C:\Users\Deej\OneDrive\School Stuff\DiplomaOfSoftwareEngineering\Intro to Software Engineering\Assessment 3\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\bin\Debug\net6.0\ISE102_Assessment3.dll
+C:\Users\Deej\OneDrive\School Stuff\DiplomaOfSoftwareEngineering\Intro to Software Engineering\Assessment 3\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\bin\Debug\net6.0\ISE102_Assessment3.pdb
+C:\Users\Deej\OneDrive\School Stuff\DiplomaOfSoftwareEngineering\Intro to Software Engineering\Assessment 3\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\obj\Debug\net6.0\ISE102_Assessment3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Deej\OneDrive\School Stuff\DiplomaOfSoftwareEngineering\Intro to Software Engineering\Assessment 3\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\obj\Debug\net6.0\ISE102_Assessment3.AssemblyInfoInputs.cache
+C:\Users\Deej\OneDrive\School Stuff\DiplomaOfSoftwareEngineering\Intro to Software Engineering\Assessment 3\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\obj\Debug\net6.0\ISE102_Assessment3.AssemblyInfo.cs
+C:\Users\Deej\OneDrive\School Stuff\DiplomaOfSoftwareEngineering\Intro to Software Engineering\Assessment 3\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\obj\Debug\net6.0\ISE102_Assessment3.csproj.CoreCompileInputs.cache
+C:\Users\Deej\OneDrive\School Stuff\DiplomaOfSoftwareEngineering\Intro to Software Engineering\Assessment 3\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\obj\Debug\net6.0\ISE102_Assessment3.dll
+C:\Users\Deej\OneDrive\School Stuff\DiplomaOfSoftwareEngineering\Intro to Software Engineering\Assessment 3\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\obj\Debug\net6.0\refint\ISE102_Assessment3.dll
+C:\Users\Deej\OneDrive\School Stuff\DiplomaOfSoftwareEngineering\Intro to Software Engineering\Assessment 3\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\obj\Debug\net6.0\ISE102_Assessment3.pdb
+C:\Users\Deej\OneDrive\School Stuff\DiplomaOfSoftwareEngineering\Intro to Software Engineering\Assessment 3\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\obj\Debug\net6.0\ISE102_Assessment3.genruntimeconfig.cache
+C:\Users\Deej\OneDrive\School Stuff\DiplomaOfSoftwareEngineering\Intro to Software Engineering\Assessment 3\ISE102_Assessment3_DanielPotter_MichaelRourke_RainierMartinEnriquez\obj\Debug\net6.0\ref\ISE102_Assessment3.dll
