@@ -1,13 +1,4 @@
-﻿/*
- * Assessment 2 - Bank App
- * 
- * Written by: Daniel Potter A00124220, Michael Rourke A00127958, and Rainier Martin Enriquez A00122886
- * Date: 02/11/23
- */
-
-// Required to use Lists
-// Required for LINQ expressions
-/// <summary>
+﻿/// <summary>
 /// Represents a user of the bank.
 /// Initialised with a username and password.
 /// </summary>

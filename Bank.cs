@@ -147,7 +147,6 @@ class Bank
                 }
 
                 // Username user input logic.
-                // TODO: Need to add unique username check!!
                 Console.WriteLine("Enter a unique Username:");
                 string? username;
                 username = Console.ReadLine();
