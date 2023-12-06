@@ -101,6 +101,8 @@ class Program
                                 break;
                             }
                         }
+                        // Set loggedIn to false to break out of the loop when the user quits.
+                        loggedIn = false;
                     }
                     break;
                 case "2":
