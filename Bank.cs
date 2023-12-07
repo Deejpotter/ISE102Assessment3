@@ -222,15 +222,32 @@ class Bank
     public void DepositCredit(User currentUser)
     {
         Console.WriteLine("How much would you like to deposit?: $");
-        double amountDeposit = Convert.ToDouble(Console.ReadLine());
+        // Need to check if the user input is a valid double.
+        string? rawInput = Console.ReadLine();
+        // If the user input is not a valid double, ask again.
+        // TryParse returns true if the input is a valid double and the converted value is stored in the out parameter.
+        if (!double.TryParse(rawInput, out double amountDeposit))
+        {
+            Console.WriteLine("Please enter a valid number.");
+            return;
+        }
         currentUser.Balance += amountDeposit;
     }
 
     public void WithdrawCredit(User currentUser)
     {
         Console.WriteLine("Enter the amount for withdrawal: $");
-        double withdrawAmount = Convert.ToDouble(Console.ReadLine());
+        // Need to check if the user input is a valid double.
+        string? rawInput = Console.ReadLine();
+        // If the user input is not a valid double, ask again.
+        // TryParse returns true if the input is a valid double and the converted value is stored in the out parameter.
+        if (!double.TryParse(rawInput, out double withdrawAmount))
+        {
+            Console.WriteLine("Please enter a valid number.");
+            return;
+        }
 
+        // Check if the user has enough money then process the withdrawal.
         if (withdrawAmount <= currentUser.Balance)
         {
             // If the amount is correct, reduce the current user's balance.
@@ -256,13 +273,23 @@ class Bank
         }
 
         // Check if the recepient email exists in the list of users.
+        // User is the current item in the loop and we are checking if the recepientEmail matches the user's email.
         User? recepient = users.Find(user => recepientEmail == user.Email);
 
+        // Make sure the user isn't null before processing the transfer
         if (recepient != null)
         {
             // If the user is found, ask for the amount to transfer.
             Console.WriteLine("Enter the amount to transfer: $");
-            double amountTransfer = Convert.ToDouble(Console.ReadLine());
+            // Need to check if the user input is a valid double.
+            string? rawInput = Console.ReadLine();
+            // If the user input is not a valid double, ask again.
+            // TryParse returns true if the input is a valid double and the converted value is stored in the out parameter.
+            if (!double.TryParse(rawInput, out double amountTransfer))
+            {
+                Console.WriteLine("Please enter a valid number.");
+                return;
+            }
 
             if (amountTransfer <= currentUser.Balance)
             {

@@ -77,7 +77,7 @@ class Program
                             {
                                 Console.WriteLine("User not found.");
                                 continue;
-                            }  
+                            }
                             currentUser.LoggedIn = true;
                             loggedIn = true;
                             // Login successful, run the UserMenu method to start the user menu loop and pass in the user object.
@@ -111,11 +111,12 @@ class Program
                 case "3":
                     Console.WriteLine("Goodbye!");
                     break;
+                // For any other choice, display an error message and continue to the next iteration of the loop.
                 default:
                     Console.WriteLine("Invalid choice, please try again.");
                     break;
             }
-            // Keep looping until the user enters the quit choice.
+        // Keep looping until the user enters the quit choice.
         } while (choice != "3");
     }
 
