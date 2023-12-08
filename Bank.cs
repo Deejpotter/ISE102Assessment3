@@ -71,28 +71,28 @@ class Bank
                 Console.WriteLine("Enter your first name:");
                 string? firstName;
                 firstName = Console.ReadLine();
-                if (string.IsNullOrWhiteSpace(firstName) || firstName.Any(char.IsDigit))
+                if (string.IsNullOrWhiteSpace(firstName) || firstName.Any(char.IsDigit) || firstName.Contains(' '))
                 {
                     do
                     {
                         Console.WriteLine("You must enter a valid name.");
                         firstName = Console.ReadLine();
 
-                    } while (string.IsNullOrWhiteSpace(firstName) || firstName.Any(char.IsDigit));
+                    } while (string.IsNullOrWhiteSpace(firstName) || firstName.Any(char.IsDigit) || firstName.Contains(' '));
                 }
 
                 // Surname user input logic.
                 Console.WriteLine("Enter your last name:");
                 string? lastName;
                 lastName = Console.ReadLine();
-                if (string.IsNullOrWhiteSpace(lastName) || lastName.Any(char.IsDigit))
+                if (string.IsNullOrWhiteSpace(lastName) || lastName.Any(char.IsDigit) || lastName.Contains(' '))
                 {
                     do
                     {
-                        Console.WriteLine("Please enter a valid name.");
+                        Console.WriteLine("Please enter a valid Surname.");
                         lastName = Console.ReadLine();
 
-                    } while (string.IsNullOrWhiteSpace(lastName) || lastName.Any(char.IsDigit));
+                    } while (string.IsNullOrWhiteSpace(lastName) || lastName.Any(char.IsDigit) || lastName.Contains(' '));
                 }
 
                 // Age user input logic.
@@ -102,7 +102,7 @@ class Bank
                     Console.WriteLine("Enter your age:");
                     string? AgeInput = Console.ReadLine();
 
-                    if (int.TryParse(AgeInput, out age))
+                    if (int.TryParse(AgeInput, out age) && age > 0 && age <= 120)
                     {
                         break;
                     }
@@ -120,7 +120,7 @@ class Bank
                     Console.WriteLine("Enter your phone number:");
                     string? PhoneNumberInput = Console.ReadLine();
 
-                    if (int.TryParse(PhoneNumberInput, out phoneNumber))
+                    if (int.TryParse(PhoneNumberInput, out phoneNumber) && PhoneNumberInput.Length >= 8 && !PhoneNumberInput.Contains(' '))
                     {
                         break;
                     }
@@ -136,20 +136,30 @@ class Bank
                 Console.WriteLine("Enter your email address:");
 
                 string? email = Console.ReadLine();
-                if (string.IsNullOrWhiteSpace(email) || !email.Contains('@'))
+                if (string.IsNullOrWhiteSpace(email) || !email.Contains('@') || !email.Contains(".com") || email.Contains(' '))
                 {
                     do
                     {
                         Console.WriteLine("You must enter a valid email address.");
                         email = Console.ReadLine();
 
-                    } while (string.IsNullOrWhiteSpace(email) || !email.Contains('@'));
+                    } while (string.IsNullOrWhiteSpace(email) || !email.Contains('@') || !email.Contains(".com") || email.Contains(' '));
                 }
 
                 // Username user input logic.
                 Console.WriteLine("Enter a unique Username:");
                 string? username;
                 username = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(username) || username.Contains(' '))
+                {
+                    do
+                    {
+                        Console.WriteLine("Please enter a vaild Username");
+                        username = Console.ReadLine();
+
+                    } while (string.IsNullOrWhiteSpace(username) || username.Contains(' '));
+                }
 
                 bool ExistingUser = false;
 
@@ -168,6 +178,16 @@ class Bank
                         Console.WriteLine("The Username " + username + " already exists, please try again.");
                         username = Console.ReadLine();
 
+                        if (string.IsNullOrWhiteSpace(username) || username.Contains(' '))
+                        {
+                            do
+                            {
+                                Console.WriteLine("Please enter a vaild Username");
+                                username = Console.ReadLine();
+
+                            } while (string.IsNullOrWhiteSpace(username) || username.Contains(' '));
+                        }
+
                         ExistingUser = false;
                         foreach (User users in users)
                         {
@@ -182,31 +202,31 @@ class Bank
 
 
                 //Password user input logic
-                Console.WriteLine("Enter a password:");
+                Console.WriteLine("Enter a password that is at least 6 characters long:");
                 string? password;
                 password = Console.ReadLine();
-                if (string.IsNullOrWhiteSpace(password))
+                if (string.IsNullOrWhiteSpace(password) || password.Length <= 5)
                 {
                     do
                     {
-                        Console.WriteLine("Enter a password:");
+                        Console.WriteLine("Enter a valid password that is at least 6 characters long:");
                         password = Console.ReadLine();
-                    } while (string.IsNullOrEmpty(password));
+                    } while (string.IsNullOrWhiteSpace(password) || password.Length <= 5);
                 }
 
                 // Add a new user with the input data.
                 newUser = new User(firstName, lastName, age, phoneNumber, email, username, password);
 
                 users.Add(newUser);
-                Console.WriteLine("New user added: " + firstName + " " + lastName + " " + age + " "
-                    + phoneNumber + " " + email + " " + username + " " + password);
+                Console.WriteLine("New user added:\nFirst name: " + firstName + "\nSurname: " + lastName + "\nAge: " + age + "\nPhone Number: "
+                    + phoneNumber + "\nEmail: " + email + "\nUsername: " + username + "\nPassword: " + password);
 
             }
             else if (choice == "n")
             {
                 break;
             }
-            else
+          else 
             {
                 Console.WriteLine("Please enter either (Y/N)");
             }
